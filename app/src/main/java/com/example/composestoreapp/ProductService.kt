@@ -1,0 +1,13 @@
+package com.example.composestoreapp
+
+import com.example.composestoreapp.models.Product
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface ProductService {
+    @GET("products")
+    suspend fun getProducts() : List<Product>
+
+    @GET("products/{id}")
+    suspend fun getProductById(@Path("id")id:Int) : Product
+}
