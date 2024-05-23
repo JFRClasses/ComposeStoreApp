@@ -46,7 +46,7 @@ fun HomeScreen() {
     }
     LazyVerticalGrid(
         modifier = Modifier.fillMaxSize().padding(10.dp),
-        columns = GridCells.Adaptive(minSize = 150.dp)
+        columns = GridCells.Fixed(2)
     ) {
 
         items(products){ product ->
